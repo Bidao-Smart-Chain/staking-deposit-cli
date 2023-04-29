@@ -15,6 +15,7 @@ GOERLI = 'goerli'
 PRATER = 'prater'
 SEPOLIA = 'sepolia'
 ZHEJIANG = 'zhejiang'
+BIDAO = 'bidao'
 
 # Mainnet setting
 MainnetSetting = BaseChainSetting(
@@ -32,6 +33,10 @@ SepoliaSetting = BaseChainSetting(
 ZhejiangSetting = BaseChainSetting(
     NETWORK_NAME=ZHEJIANG, GENESIS_FORK_VERSION=bytes.fromhex('00000069'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('53a92d8f2bb1d85f62d16a156e6ebcd1bcaba652d0900b2c2f387826f3481f6f'))
+# Bidao setting
+BidaoSetting = BaseChainSetting(
+    NETWORK_NAME=BIDAO, GENESIS_FORK_VERSION=bytes.fromhex('90000069'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('b40031bdb30d791403d39f15ebe860db6f29cc2ca416f94506b7059ccadff203'))
 
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
@@ -40,6 +45,7 @@ ALL_CHAINS: Dict[str, BaseChainSetting] = {
     PRATER: GoerliSetting,  # Prater is the old name of the Prater/Goerli testnet
     SEPOLIA: SepoliaSetting,
     ZHEJIANG: ZhejiangSetting,
+    BIDAO: BidaoSetting,
 }
 
 
